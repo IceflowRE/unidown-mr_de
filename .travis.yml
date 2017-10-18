@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.6"
+  - "3.7-dev" # 3.7 development branch
+script:
+  - pip install -e .[dev]
+  - nose2 -c setup.cfg -v
+  - codecov
