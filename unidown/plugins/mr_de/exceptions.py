@@ -2,7 +2,7 @@
 mr_de specific module exceptions.
 """
 
-from plugins.exceptions import ModuleException
+from unidown.plugins.exceptions import ModuleException
 
 
 class GetEbookLinksException(ModuleException):
