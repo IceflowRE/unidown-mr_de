@@ -5,19 +5,20 @@ from datetime import datetime
 from pathlib import Path
 
 import certifi
-import unidown.core.data.static as static_data
+import unidown.core.data.dynamic as dynamic_data
 import urllib3
 import urllib3.util
 from unidown.plugins.a_plugin import APlugin
 from unidown.plugins.data.link_item import LinkItem
 from unidown.plugins.data.plugin_info import PluginInfo
 from unidown.plugins.exceptions import GetDownloadLinksException, LastUpdateException
+from unidown.tools.tdqm_option import TdqmOption
+from unidown.tools.tools import create_dir_rec, progress_bar
+
 from unidown.plugins.mr_de.exceptions import GetEbookLinksException, NothingFoundInThread
 from unidown.plugins.mr_de.html_parser.last_update_html_parser import LastUpdateHTMLParser
 from unidown.plugins.mr_de.html_parser.list_html_parser import ListHTMLParser
 from unidown.plugins.mr_de.html_parser.thread_html_parser import ThreadHTMLParser
-from unidown.tools.tdqm_option import TdqmOption
-from unidown.tools.tools import create_dir_rec, progress_bar
 
 
 class Plugin(APlugin):
@@ -130,7 +131,7 @@ class Plugin(APlugin):
         """
         job_list = []
 
-        with ProcessPoolExecutor(max_workers=static_data.USING_CORES) as executor:
+        with ProcessPoolExecutor(max_workers=dynamic_data.USING_CORES) as executor:
             for link, item in link_item_dict.items():  # all thread htmls
                 path = self.threads_path.joinpath(item.name)
                 job = executor.submit(self.get_ebook_links_from_file, path)
