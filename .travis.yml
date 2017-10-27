@@ -1,8 +1,16 @@
 language: python
-python:
-  - "3.6"
-  - "3.7-dev" # 3.7 development branch
+
+matrix:
+  include:
+  - python: "3.6"
+    env: PY_VERSION=py36
+  - python: "3.7-dev" # 3.7 development branch
+    env: PY_VERSION=py37
+
+install:
+  - pip install --upgrade -e .[dev]
+
 script:
-  - pip install -e .[dev]
+  - ./scripts/build.sh "$PY_VERSION"
   - nose2 -c setup.cfg -v
   - codecov

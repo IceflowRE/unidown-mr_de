@@ -33,6 +33,7 @@ setup(
             'codecov',
             'nose2',
             'Sphinx',
+            'wheel',
         ]
     },
     package_data={

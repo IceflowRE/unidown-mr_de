@@ -23,7 +23,7 @@ from unidown.plugins.mr_de.html_parser.thread_html_parser import ThreadHTMLParse
 
 class Plugin(APlugin):
     """
-    Pöugin class, derived from APlugin.
+    Plugin class, derived from APlugin.
     """
 
     def __init__(self):
@@ -34,7 +34,7 @@ class Plugin(APlugin):
         self.unit = 'eBook'
         create_dir_rec(self.threads_path)
 
-    def get_download_links(self):
+    def _create_download_links(self):
         wiki_thread_dic = self.get_thread_links()  # link: name
         self.logging.info('Threads found: ' + str(len(wiki_thread_dic)))
 
@@ -49,7 +49,7 @@ class Plugin(APlugin):
         link_item_dict = self.get_ebook_links(wiki_thread_dic)
         return link_item_dict
 
-    def get_last_update(self):
+    def _create_last_update(self):
         self.logging.info('Download thread overview list')
         self.download_wiki_list()
         parser = LastUpdateHTMLParser()
