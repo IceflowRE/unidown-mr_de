@@ -1,11 +1,13 @@
 version: '{build}'
 
+skip_tags: true
+
 environment:
   matrix:
-    - PYTHON_DIR: "C:\\Python36-x64"
-      PY_VERSION: "py36"
-    - PYTHON_DIR: "C:\\Python36"
-      PY_VERSION: "py36"
+    - PYTHON_DIR: "C:\\Python37-x64"
+      PY_VERSION: "py37"
+    - PYTHON_DIR: "C:\\Python37"
+      PY_VERSION: "py37"
 
 install:
   - "%PYTHON_DIR%\\Scripts\\pip install --upgrade -e .[dev]"
@@ -16,3 +18,5 @@ build_script:
 
 test_script:
   - "%PYTHON_DIR%\\Scripts\\nose2 -c setup.cfg -v"
+  - "%PYTHON_DIR%\\Scripts\\sphinx-build -b html ./doc/source/ ./doc/build/hml/"
+  - "%PYTHON_DIR%\\Scripts\\sphinx-build -b linkcheck ./doc/source/ ./doc/build/linkcheck/"

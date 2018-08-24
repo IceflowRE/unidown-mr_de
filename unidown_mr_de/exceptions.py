@@ -2,10 +2,10 @@
 mr_de specific module exceptions.
 """
 
-from unidown.plugins.exceptions import ModuleException
+from unidown.plugin.exceptions import PluginException
 
 
-class GetEbookLinksException(ModuleException):
+class GetEbookLinksException(PluginException):
     """
     Something wents wrong while parsing an wiki thread.
     """
@@ -16,7 +16,7 @@ class GetEbookLinksException(ModuleException):
         self.orig_ex = orig_ex
 
 
-class NothingFoundInThread(ModuleException):
+class NothingFoundInThread(PluginException):
     """
     If no ebook in a wiki thread was found.
     """

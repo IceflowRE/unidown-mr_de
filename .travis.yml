@@ -2,15 +2,48 @@ language: python
 
 matrix:
   include:
-  - python: "3.6"
-    env: PY_VERSION=py36
-  - python: "3.7-dev" # 3.7 development branch
+  - python: "3.7"  # remove workaround if travis relases 3.7 officially
+    if: tag IS blank
     env: PY_VERSION=py37
+    dist: xenial
+    sudo: true
+  - python: "3.8-dev"
+    if: tag IS blank
+    env: PY_VERSION=py38
+  allow_failures:
+  - python: "3.8-dev"
+
+addons:
+  apt:
+    update: true
 
 install:
   - pip install --upgrade -e .[dev]
+  - pip install codacy-coverage codecov
 
 script:
   - ./scripts/build.sh "$PY_VERSION"
   - nose2 -c setup.cfg -v
+
+after_success:
   - codecov
+  - coverage xml
+  - python-codacy-coverage -v -r coverage.xml
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: twine upload -u iceflower -p $TEST_PYPI_PASSWORD --skip-existing --repository-url https://test.pypi.org/legacy/ dist/*
+    on:
+      repo: IceflowRE/unidown-mr_de
+      tags: true
+      branch:
+        - master
+#  - provider: script
+#    skip_cleanup: true
+#    script: twine upload -u iceflower -p $PYPI_PASSWORD --skip-existing dist/*
+#    on:
+#      repo: IceflowRE/unidown-mr_de
+#      tags: true
+#      branch:
+#        - master

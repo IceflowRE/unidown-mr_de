@@ -3,22 +3,20 @@ import traceback
 from concurrent.futures import ProcessPoolExecutor
 from datetime import datetime
 from pathlib import Path
+from typing import List
 
 import certifi
-import unidown.core.data.dynamic as dynamic_data
 import urllib3
 import urllib3.util
-from unidown.plugins.a_plugin import APlugin
-from unidown.plugins.data.link_item import LinkItem
-from unidown.plugins.data.plugin_info import PluginInfo
-from unidown.plugins.exceptions import GetDownloadLinksException, LastUpdateException
-from unidown.tools.tdqm_option import TdqmOption
-from unidown.tools.tools import create_dir_rec, progress_bar
+from unidown.plugin.a_plugin import APlugin
+from unidown.plugin.link_item import LinkItem
+from unidown.plugin.plugin_info import PluginInfo
+from unidown.tools import create_dir_rec
 
-from unidown.plugins.mr_de.exceptions import GetEbookLinksException, NothingFoundInThread
-from unidown.plugins.mr_de.html_parser.last_update_html_parser import LastUpdateHTMLParser
-from unidown.plugins.mr_de.html_parser.list_html_parser import ListHTMLParser
-from unidown.plugins.mr_de.html_parser.thread_html_parser import ThreadHTMLParser
+from unidown_mr_de.exceptions import GetEbookLinksException, NothingFoundInThread
+from unidown_mr_de.html_parser.last_update_html_parser import LastUpdateHTMLParser
+from unidown_mr_de.html_parser.list_html_parser import ListHTMLParser
+from unidown_mr_de.html_parser.thread_html_parser import ThreadHTMLParser
 
 
 class Plugin(APlugin):
@@ -26,10 +24,9 @@ class Plugin(APlugin):
     Plugin class, derived from APlugin.
     """
 
-    def __init__(self):
-        super().__init__(PluginInfo('mr_de', '1.0.0', 'www.mobileread.com'))
-        self.format_list = ['epub', 'mobi', 'lrf', 'imp', 'pdf', 'lit', 'azw', 'azw3', 'rar',
-                            'lrx']  # TODO: make optional
+    def __init__(self, options: List[str] = None):
+        super().__init__(PluginInfo('mr_de', '1.0.0', 'www.mobileread.com'), options)
+        self.format_list = ['epub', 'mobi', 'lrf', 'imp', 'pdf', 'lit', 'azw', 'azw3', 'rar', 'lrx']
         self.threads_path = self.temp_path.joinpath('threads/')
         self.unit = 'eBook'
         create_dir_rec(self.threads_path)

@@ -1,5 +1,12 @@
 output-format: pylint
 
+ignore-paths:
+    - doc
+    - scripts
+    - tests
+    - unidown/plugin/protobuf
+    - unidown\plugin\protobuf # for windows, see issue #203
+
 strictness: veryhigh
 test-warnings: true
 doc-warnings: true
@@ -22,15 +29,19 @@ frosted:
 mccabe:
     run: true
 
-pep257:
+pydocstyle:
     run: true
     disable:
+        - D105 # Missing docstring in magic method
+        - D107 # Missing docstring in __init__
         - D200 # One-line docstrings can not fit into more lines
         - D203 # 1 blank line required before class docstring
         - D204 # 1 blank line required after class docstring
         - D205 # 1 blank line required between summary line and description
+        - D212 # Multi-line docstring summary should start at the first line
+        - F999 # Too many false positive due to type hints
 
-pep8:
+pycodestyle:
     run: false # pylint will check
     full: true
     options:
