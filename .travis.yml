@@ -17,16 +17,11 @@ addons:
 
 install:
   - pip install --upgrade -e .[dev]
-  - pip install codacy-coverage
 
 script:
   - ./scripts/build.sh "$PY_VERSION"
   - nose2 -c setup.cfg -v
   - python setup.py check -v -r -m -s
-
-after_success:
-  - coverage xml
-  - python-codacy-coverage -v -r coverage.xml
 
 deploy:
   - provider: script
