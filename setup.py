@@ -9,7 +9,7 @@ with Path('README.rst').open(mode='r', encoding='UTF-8') as reader:
 
 setup(
     name='unidown-mr_de',
-    version='1.0.0',
+    version='1.0.0.dev1',
     description='MR german books plugin for Universal-Downloader.',
     long_description=long_description,
     author='Iceflower S',
