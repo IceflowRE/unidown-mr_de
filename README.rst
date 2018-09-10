@@ -23,7 +23,7 @@ Download and unzip the latest release of this program/ script. (https://github.c
 Run `InstallMissingModules.sh`. This will install additional required modules for Python.
 
 Usage
-----
+-----
 
 Run `Start.sh` (Linux) or `Start.bat` (Windows) or **better** run `StartDeDownload.py` from the command line!
 
@@ -111,28 +111,10 @@ Prospector
     - `landscapeio <https://github.com/landscapeio>`_
     - https://github.com/landscapeio/prospector
     - `GPL-2.0+ <https://github.com/landscapeio/prospector/blob/master/LICENSE>`_
-Protocol Buffers
-    - `Google Inc. <https://github.com/google>`_
-    - https://github.com/google/protobuf/tree/master/python
-    - `BSD-3-Clause <https://github.com/google/protobuf/blob/master/LICENSE>`_
-Read the Docs Sphinx Theme
-    - `Dave Snider <https://github.com/snide>`_
-    - https://github.com/rtfd/sphinx_rtd_theme
-    - `MIT <https://github.com/rtfd/sphinx_rtd_theme/blob/master/LICENSE>`_
 Setuptools
     - Jason R Coombs / `Setuptools Developers <https://github.com/orgs/pypa/teams/setuptools-developers>`_
     - https://github.com/pypa/setuptools
     - `MIT <https://github.com/pypa/setuptools/blob/master/LICENSE>`_
-Sphinx
-    - `the Sphinx team <https://github.com/sphinx-doc/sphinx/blob/master/AUTHORS>`_
-    - https://github.com/sphinx-doc/sphinx
-    - `BSD-2-Clause <https://github.com/sphinx-doc/sphinx/blob/master/LICENSE>`_
-
-sphinxcontrib-svg2pdfconverter
-    - `Missing Link Electronics, Inc. <https://github.com/missinglinkelectronics>`_
-    - https://github.com/missinglinkelectronics/sphinxcontrib-svg2pdfconverter
-    - `BSD-2-Clause <https://github.com/missinglinkelectronics/sphinxcontrib-svg2pdfconverter/blob/master/LICENSE.txt>`_
-
 tqdm
     - `noamraph <https://github.com/noamraph>`_
     - https://github.com/tqdm/tqdm
@@ -167,11 +149,11 @@ License
 .. |license| image:: https://img.shields.io/badge/License-GPL%20v3-blue.svg
    :target: https://www.gnu.org/licenses/gpl-3.0
 
-.. |travis| image:: https://img.shields.io/travis/com/IceflowRE/unidown/master.svg?label=Travis%20CI
-   :target: https://travis-ci.org/IceflowRE/unidown
+.. |travis| image:: https://img.shields.io/travis/com/IceflowRE/unidown-mr_de/master.svg?label=Travis%20CI
+   :target: https://travis-ci.org/IceflowRE/unidown-mr_de
    
-.. |appveyor| image:: https://img.shields.io/appveyor/ci/IceflowRE/unidown/master.svg?label=AppVeyor%20CI
-    :target: https://ci.appveyor.com/project/IceflowRE/unidown/branch/master
+.. |appveyor| image:: https://img.shields.io/appveyor/ci/IceflowRE/unidown-mr_de/master.svg?label=AppVeyor%20CI
+    :target: https://ci.appveyor.com/project/IceflowRE/unidown_mr_de/branch/master
 
 .. |readthedocs| image:: https://readthedocs.org/projects/unidown/badge/?version=latest
    :target: https://unidown.readthedocs.io/en/latest/index.html

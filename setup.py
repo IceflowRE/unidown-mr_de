@@ -1,10 +1,17 @@
 #!/usr/bin/env python
+from pathlib import Path
+
 from setuptools import find_packages, setup
+
+# get long description
+with Path('README.rst').open(mode='r', encoding='UTF-8') as reader:
+    long_description = reader.read()
 
 setup(
     name='unidown-mr_de',
     version='1.0.0',
     description='MR german books plugin for Universal-Downloader.',
+    long_description=long_description,
     author='Iceflower S',
     author_email='iceflower@gmx.de',
     license='GPLv3',
@@ -23,9 +30,9 @@ setup(
     packages=find_packages(include=['unidown_mr_de', 'unidown_mr_de.*']),
     python_requires='>=3.7',
     install_requires=[
-        'unidown==2.0.0.dev1',
+        'unidown==2.0.0.dev6',
         'urllib3[secure]==1.23',
-        #'tqdm==4.25.0',
+        'tqdm==4.25.0',
     ],
     extras_require={
         'dev': [
