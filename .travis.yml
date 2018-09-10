@@ -17,7 +17,7 @@ addons:
 
 install:
   - pip install --upgrade -e .[dev]
-  - pip install codacy-coverage codecov
+  - pip install codacy-coverage
 
 script:
   - ./scripts/build.sh "$PY_VERSION"
@@ -25,7 +25,6 @@ script:
   - python setup.py check -v -r -m -s
 
 after_success:
-  - codecov
   - coverage xml
   - python-codacy-coverage -v -r coverage.xml
 

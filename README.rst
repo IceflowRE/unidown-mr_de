@@ -3,7 +3,7 @@ MR German plugin for unidown
 ****************************
 |maintained| |programming language| |license|
 
-|travis| |appveyor| |readthedocs| |requirements| |codacy| |codecov|
+|travis| |appveyor| |requirements| |codacy|
 
 ----
 
@@ -150,22 +150,16 @@ License
    :target: https://www.gnu.org/licenses/gpl-3.0
 
 .. |travis| image:: https://img.shields.io/travis/com/IceflowRE/unidown-mr_de/master.svg?label=Travis%20CI
-   :target: https://travis-ci.org/IceflowRE/unidown-mr_de
+   :target: https://travis-ci.com/IceflowRE/unidown-mr_de
    
-.. |appveyor| image:: https://img.shields.io/appveyor/ci/IceflowRE/unidown-mr_de/master.svg?label=AppVeyor%20CI
+.. |appveyor| image:: https://img.shields.io/appveyor/ci/IceflowRE/unidown-mr-de/master.svg?label=AppVeyor%20CI
     :target: https://ci.appveyor.com/project/IceflowRE/unidown_mr_de/branch/master
 
-.. |readthedocs| image:: https://readthedocs.org/projects/unidown/badge/?version=latest
-   :target: https://unidown.readthedocs.io/en/latest/index.html
+.. |requirements| image:: https://requires.io/github/IceflowRE/unidown-mr_de/requirements.svg?branch=master
+   :target: https://requires.io/github/IceflowRE/unidown-mr_de/requirements/?branch=master
 
-.. |requirements| image:: https://requires.io/github/IceflowRE/unidown/requirements.svg?branch=master
-   :target: https://requires.io/github/IceflowRE/unidown/requirements/?branch=master
-
-.. |codacy| image:: https://api.codacy.com/project/badge/Grade/7783e0b9e3734ee6ab43e142b43e9663
-   :target: https://app.codacy.com/project/IceflowRE/unidown/dashboard
-   
-.. |codecov| image:: https://img.shields.io/codecov/c/github/IceflowRE/unidown/master.svg?label=coverage
-   :target: https://codecov.io/gh/IceflowRE/unidown
+.. |codacy| image:: https://api.codacy.com/project/badge/Grade/8b542926cd9e445c97545f2245aac712
+   :target: https://www.codacy.com/app/IceflowRE/unidown-mr_de
 
 ---  
 
