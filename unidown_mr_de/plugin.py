@@ -27,10 +27,13 @@ class Plugin(APlugin):
     def __init__(self, options: List[str] = None):
         super().__init__(options)
         self._unit = 'eBook'
+
         if 'format' in self._options:
             self._options['format'] = self._options['format'].split(',')
         else:
             self._options['format'] = []
+        if 'delay' not in self._options:
+            self._options['delay'] = 2
 
         self.threads_path = self.temp_path.joinpath('threads/')
         tools.create_dir_rec(self.threads_path)
