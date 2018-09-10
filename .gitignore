@@ -1,5 +1,8 @@
 # Own rules
-/tmp
+/downloads/
+/temp/
+/savestates/
+UniDown.log
 
 .idea/
 
