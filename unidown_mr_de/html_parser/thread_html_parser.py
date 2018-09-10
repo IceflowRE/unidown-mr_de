@@ -7,8 +7,21 @@ class ThreadHTMLParser(HTMLParser):
     """
     Extractor for the ebook links from the forum threads.
     Checks only the first post for an possible ebook link. (self.in_container > 1)
-    :ivar link_data_list: items: (id, name)
+
+    :ivar last_link: latest found link
+    :vartype last_link: str
+    :ivar link_data_list: attachment id and link of the collected resources
+    :vartype link_data_list: List[Tuple[str, str]]
+    :ivar in_posts: if in post sector
+    :vartype in_posts: bool
+    :ivar in_continer: if in container sector
+    :vartype in_continer: bool
+    :ivar in_edit_note_part: if in edit sector
+    :vartype in_edit_note_part: bool
+    :ivar in_em_tag: if in edit date/ time tag
+    :vartype in_em_tag: bool
     :ivar time: time of last editing
+    :vartype time: upload time of the resource
     """
 
     def __init__(self):

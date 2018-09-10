@@ -1,19 +1,23 @@
 from html.parser import HTMLParser
+from typing import List
 
 
 class ListHTMLParser(HTMLParser):
     """
     Extractor for the forum threads of the wiki list.
-    :ivar format_list: formats which should get
+
+    :param format_list: which formats will be collected
+    :type format_list: List[str]
+
+    :ivar format_list: which formats will be collected
+    :vartype format_list: List[str]
     :ivar last_link: last detected link
+    :vartype last_link: str
     :ivar thread_list: thread list
+    :vartype thread_list: List[str]
     """
 
-    def __init__(self, format_list):
-        """
-        Constructor.
-        :param format_list: which formats only should get
-        """
+    def __init__(self, format_list: List[str]):
         HTMLParser.__init__(self)
         self.format_list = format_list
         self.last_link = ''
@@ -48,7 +52,7 @@ class ListHTMLParser(HTMLParser):
         """
         # a valid link must be inside an 'a' tag and data must be a valid format
         # last_link is empty if outside of an 'a' tag
-        if (data.lower() not in self.format_list) or (self.last_link == ''):
+        if not (data.lower() in self.format_list or len(self.format_list) == 0) or (self.last_link == ''):
             return
         # cut the link, only the part after the hostname is needed
         self.last_link = self.last_link[25:]

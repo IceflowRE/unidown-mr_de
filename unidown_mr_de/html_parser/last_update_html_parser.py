@@ -6,7 +6,9 @@ from html.parser import HTMLParser
 class LastUpdateHTMLParser(HTMLParser):
     """
     Extractor for the forum threads from the wiki list.
+
     :ivar wiki_list_date: update time of the wiki list
+    :vartype wiki_list_date: ~datetime.datetime
     """
 
     def __init__(self):
