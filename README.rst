@@ -1,14 +1,14 @@
-****************************
-MR German plugin for unidown
-****************************
+**********************************
+MR german books plugin for unidown
+**********************************
 |maintained| |programming language| |license|
 
 |travis| |appveyor| |requirements| |codacy|
 
 ----
 
-This program/script downloads all avaible ebooks from the german MobileRead wiki (http://wiki.mobileread.com/wiki/Free_eBooks-de/de)  
-Dieses Programm/ Skript lädt alle verfügbaren eBooks von der deutschen MobileRead Wikiliste (http://wiki.mobileread.com/wiki/Free_eBooks-de/de) herunter.
+This program/script downloads all available ebooks from the german MobileRead wiki (https://wiki.mobileread.com/wiki/Free_eBooks-de/de)
+Dieses Programm lädt alle verfügbaren eBooks von der deutschen MobileRead Wikiliste (https://wiki.mobileread.com/wiki/Free_eBooks-de/de) herunter.
 
 ----
 
@@ -18,69 +18,98 @@ Information - *English*
 Installation
 ------------
 
-Install Python 3 or greater, don't forget to use the correct architecture. (https://www.python.org/downloads/)
-Download and unzip the latest release of this program/ script. (https://github.com/IceflowRE/MR-eBook-Downloader/releases/latest)
-Run `InstallMissingModules.sh`. This will install additional required modules for Python.
+Install Python 3 or greater. (https://www.python.org/downloads/)
+
+Open a terminal and install with:
+
+.. code-block:: shell
+
+    pip install unidown-mr_de
 
 Usage
 -----
 
-Run `Start.sh` (Linux) or `Start.bat` (Windows) or **better** run `StartDeDownload.py` from the command line!
+Open a terminal:
 
-Created data
-------------
+.. code-block:: shell
 
-- `ebook` folder where all ebooks will downloaded.
-- `temp` stores the temporary data. At the end this folder should be deleted.
-- `udpate.data` saves data over the downloaded ebooks, do not **deleted!** If you want to update or download the ebooks again it will only download the new ones.
-- `noEbookFound.txt` stores a list of threads where no ebook was found.
-- `failedDownload.txt` stores a list of links where the download was failed. You can try a manual download, if you succeed you should not forget to add an entry to the update.data file.
+    unidown -p mr_de
 
-Expert settings
----------------
-Faster download: edit in `MrDeDownloader.py` the line `using_core = 4`, change the number to a higher count. Have in mind that this will strain your PC and the MR server.
-Download only specific formats: edit in `MrDeDownloader.py` the line `format_list = ['epub', 'mobi', 'lrf', 'imp', 'pdf', 'lit', 'azw', 'azw3', 'rar', 'lrx']`, remove not needed formats.
+Options
+-------
+
+There are some optional options you can choose from:
+
+delay
+    Delay (seconds) between the downloads (default: 2s).
+format
+    Download only the specified format (default: all formats).
+
+Example:
+
+.. code-block:: shell
+
+    unidown -p mr_de delay=4 format=epub,mobi,lrf,imp,pdf,lit,azw,azw3,rar,lrx
+
+Donwloaded files
+----------------
+
+By default the program creates a downloads folder in the executing directory. So the ebooks are in `./downloads/mr_de`.
 
 Notes
 -----
 There will be some false positive for examples images or ebooks with wrong extensions e.g. `.pdb` which was a `.epub`.
-Have in mind that you can be banned or something similar if you strained the MR server too much.
+
+You should have in mind that the MR server was not intended for this automatically/ machine usage.
 
 Information - *Deutsch*
 =======================
 
-Installieren
+Installation
 ------------
-Installiere Python 3 oder höher, vergess dabei nicht die richtige Architektur zu wählen. (https://www.python.org/downloads/)
-Downloade und entpacke die letzte Veröffentlichung von dem Downloader. (https://github.com/IceflowRE/MR-eBook-Downloader/releases/latest)
-Führe `InstallMissingModules.sh` aus. Dies wird gegebenenfalls fehlende, benötigte Python Module installieren.
 
-Benutzung
----------
+Installiere Python 3 or höher. (https://www.python.org/downloads/)
 
-Starte `Start.sh` (Linux) oder `Start.bat` (Windows) oder **besser**, starte `StartDeDownload.py` von der Kommandozeile aus.
+Öffne ein Terminal und installiere es mit:
 
-Erstellte Daten
----------------
+.. code-block:: shell
 
-- `ebook` der Ordner wohin alle eBooks heruntergeladen werden.
-- `temp` speichert temporär benötigte Daten. Diese sollten am Ende jedoch wieder gelöscht werden.
-- `udpate.data` speichert Daten über die heruntergeladenen eBooks, nicht **löschen!** Falls der Donwloader nochmals ausgeführt wird, werden nur neue und aktualisierte eBooks heruntergeladen.
-- `noEbookFound.txt` enthält eine List von Threads in welchen keine eBooks gefunden wurden.
-- `failedDownload.txt` enthält eine List von Links wo der Download fehlgeschlagen ist. Ein manueller Download kann versucht werden. Sollte dies klappen sollte man den entsprechenden Eintrag in der update.data ergänzen.
+    pip install unidown-mr_de
 
-Experteneinstellungen
----------------------
+Benutzen
+--------
 
-Schnellerer Download: ändere in der `MrDeDownloader.py` Datei die Zeile `using_core = 4`, zu einer höheren Zahl. Beachte dabei jedoch, dass dies den PC und den MR Server stärker belastet.
-Nur bestimmte Formate herunterladen: entferne in der `MrDeDownloader.py` Datei, in der Zeile `format_list = ['epub', 'mobi', 'lrf', 'imp', 'pdf', 'lit', 'azw', 'azw3', 'rar', 'lrx']` die entsprechenden Formate.
+Öffne ein Terminal:
+
+.. code-block:: shell
+
+    unidown -p mr_de
+
+Optionen
+--------
+
+Es können verschieden optionale Optionen hinzugefügt werden.
+
+delay
+    Verzögerung (Sekunden) zwischen den Downloads (Standard: 2s).
+format
+    Lädt nur die spezifizierten Formate herunter (Standard: jedes Format).
+
+Beispiel:
+
+.. code-block:: shell
+
+    unidown -p mr_de delay=4 format=epub,mobi,lrf,imp,pdf,lit,azw,azw3,rar,lrx
+
+Heruntergeladene Dateien
+------------------------
+
+Standardmäßig erstellt das Programm in dem Ordner, von wo es ausgeführt wurde einen Downloadordner, so sind die eBooks dann in `./downloads/mr_de`.
 
 Hinweis
 -------
 
-Es werden einige "falsche" Dateien heruntergeladen, beispielsweise Bilder oder Dateien mit einer falschen Dateiendung zum Beispiel `.pdb`, welche aber eine `.epub` darstellt.
-Beachte auch, dass der MR Server stärker belastet wird und ein Ban oder ähnliche Maßnahmen erfolgen können.
-
+Du solltest beachten, dass die MR Server nicht für diese automatische/ maschinelle Benutzung gedacht sind.
 
 ----
 
@@ -153,7 +182,7 @@ License
    :target: https://travis-ci.com/IceflowRE/unidown-mr_de
    
 .. |appveyor| image:: https://img.shields.io/appveyor/ci/IceflowRE/unidown-mr-de/master.svg?label=AppVeyor%20CI
-    :target: https://ci.appveyor.com/project/IceflowRE/unidown_mr_de/branch/master
+    :target: https://ci.appveyor.com/project/IceflowRE/unidown-mr-de/branch/master
 
 .. |requirements| image:: https://requires.io/github/IceflowRE/unidown-mr_de/requirements.svg?branch=master
    :target: https://requires.io/github/IceflowRE/unidown-mr_de/requirements/?branch=master
