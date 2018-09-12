@@ -65,7 +65,7 @@ You should have in mind that the MR server was not intended for this automatical
 Information - *Deutsch*
 =======================
 
-Installation
+Installieren
 ------------
 
 Installiere Python 3 or höher. (https://www.python.org/downloads/)
