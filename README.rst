@@ -38,7 +38,7 @@ Open a terminal:
 Options
 -------
 
-There are some optional options you can choose from:
+There are some options you can choose from:
 
 delay
     Delay (seconds) between the downloads (default: 2s).
@@ -88,7 +88,7 @@ Benutzen
 Optionen
 --------
 
-Es können verschieden optionale Optionen hinzugefügt werden.
+Es können verschiedene Optionen hinzugefügt werden.
 
 delay
     Verzögerung (Sekunden) zwischen den Downloads (Standard: 2s).
@@ -104,12 +104,12 @@ Beispiel:
 Heruntergeladene Dateien
 ------------------------
 
-Standardmäßig erstellt das Programm in dem Ordner, von wo es ausgeführt wurde einen Downloadordner, so sind die eBooks dann in `./downloads/mr_de`.
+Standardmäßig erstellt das Programm in dem Ordner, von dem es ausgeführt wurde, einen Downloadordner. Somit befinden sich die heruntergeladenen eBooks in `./downloads/mr_de`.
 
 Hinweis
 -------
 
-Du solltest beachten, dass die MR Server nicht für diese automatische/ maschinelle Benutzung gedacht sind.
+Du solltest beachten, dass die MR Server nicht für diese automatische/maschinelle Benutzung gedacht sind.
 
 ----
 
