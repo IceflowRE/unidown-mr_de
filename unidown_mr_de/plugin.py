@@ -56,6 +56,15 @@ class Plugin(APlugin):
 
     def _create_last_update_time(self) -> datetime:
         self.log.info('Download thread overview list')
+        with urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where()) as https:
+            with https.request('HEAD', 'https://wiki.mobileread.com/wiki/Free_eBooks-de/de', preload_content=False,
+                               retries=urllib3.util.retry.Retry(3)) as req:
+                if 'Last-Modified' in req.headers:
+                    last_date = req.headers['Last-Modified']
+                    month = {'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6, 'Jul': 7, 'Aug': 8, 'Sep': 9,
+                             'Oct': 10, 'Nov': 11, 'Dec': 12}[req.headers['Last-Modified'][8:11]]
+                    return datetime(year=int(last_date[12:16]), month=month, day=int(last_date[5:7]))
+        # if the url header fails read directly from html file
         self.download_wiki_list()
         parser = LastUpdateHTMLParser()
         with self.temp_path.joinpath('main_list.html').open(mode='r', encoding="utf8") as reader:
