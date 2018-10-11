@@ -30,4 +30,4 @@ class LastUpdateHTMLParser(HTMLParser):
                 date = re.search(r"(\d\d).(\d\d).(\d\d\d\d)", value)
                 if date is not None:
                     date = date.group()
-                    self.wiki_list_date = datetime(int(date[-4:]), int(date[3:5]), int(date[:2]))
+                    self.wiki_list_date = datetime.strptime(date, '%d.%m.%Y')
