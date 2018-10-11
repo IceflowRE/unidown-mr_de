@@ -5,31 +5,38 @@ MR german books plugin for unidown
 
 |travis| |appveyor| |requirements| |codacy|
 
+|pypi|
+
 ----
 
-This program/script downloads all available ebooks from the german MobileRead wiki (https://wiki.mobileread.com/wiki/Free_eBooks-de/de)
-Dieses Programm lädt alle verfügbaren eBooks von der deutschen MobileRead Wikiliste (https://wiki.mobileread.com/wiki/Free_eBooks-de/de) herunter.
+This plugin makes it possible to download all available ebooks from the german MobileRead wiki (https://wiki.mobileread.com/wiki/Free_eBooks-de/de)
+
+Dieses Plugin ermöglicht es alle verfügbaren eBooks von der deutschen MobileRead Wikiliste (https://wiki.mobileread.com/wiki/Free_eBooks-de/de) herunterzuladen.
 
 ----
 
 Information - *English*
 =======================
 
+This is a plugin for `unidown <https://github.com/IceflowRE/unidown>`__, in short unidown manages the already downloaded ebooks and prevents that they will be downloaded again.
+
 Installation
 ------------
 
-Install Python 3 or greater. (https://www.python.org/downloads/)
+Install `Python <https://www.python.org/downloads/>`__ 3 or greater.
 
 Open a terminal and install with:
 
 .. code-block:: shell
 
-    pip install unidown-mr_de
+    pip install unidown-mr-de
+
+This installs the main program `unidown <https://github.com/IceflowRE/unidown>`__ and the plugin.
 
 Usage
 -----
 
-Open a terminal:
+Open a terminal and:
 
 .. code-block:: shell
 
@@ -51,35 +58,38 @@ Example:
 
     unidown -p mr_de delay=4 format=epub,mobi,lrf,imp,pdf,lit,azw,azw3,rar,lrx
 
-Donwloaded files
+Downloaded files
 ----------------
 
 By default the program creates a downloads folder in the executing directory. So the ebooks are in `./downloads/mr_de`.
 
 Notes
 -----
-There will be some false positive for examples images or ebooks with wrong extensions e.g. `.pdb` which was a `.epub`.
 
 You should have in mind that the MR server was not intended for this automatically/ machine usage.
 
 Information - *Deutsch*
 =======================
 
+Dies ist ein Plugin für das Programm `unidown <https://github.com/IceflowRE/unidown>`__, kurz unidown verwaltet die bereits heruntergeladenen eBooks und verhindert doppelte Downloads.
+
 Installieren
 ------------
 
-Installiere Python 3 or höher. (https://www.python.org/downloads/)
+Installiere `Python <https://www.python.org/downloads/>`__ 3 oder höher.
 
 Öffne ein Terminal und installiere es mit:
 
 .. code-block:: shell
 
-    pip install unidown-mr_de
+    pip install unidown-mr-de
 
-Benutzen
---------
+Dies Installiert das Programm `unidown <https://github.com/IceflowRE/unidown>`__ und dieses Plugin.
 
-Öffne ein Terminal:
+Benutzung
+---------
+
+Öffne ein Terminal und:
 
 .. code-block:: shell
 
@@ -122,7 +132,7 @@ Credits
 =======
 
 - Developer
-    - Iceflower S
+    - `Iceflower S <https://github.com/IceflowRE>`__
         - iceflower@gmx.de
 
 Third Party
@@ -168,6 +178,12 @@ License
    :alt: GPLv3
    :align: center
 
+Copyright (C) 2015-2018 Iceflower S
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 .. Badges.
 
 .. |maintained| image:: https://img.shields.io/badge/maintained-yes-brightgreen.svg
@@ -190,13 +206,5 @@ License
 .. |codacy| image:: https://api.codacy.com/project/badge/Grade/8b542926cd9e445c97545f2245aac712
    :target: https://www.codacy.com/app/IceflowRE/unidown-mr_de
 
----  
-
-## License
-![Image of GPLv3](http://www.gnu.org/graphics/gplv3-127x51.png)
-
-Copyright  ©  Iceflower S
-
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.  
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.  
-You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/gpl.html>.
+.. |pypi| image:: https://img.shields.io/pypi/v/unidown-mr-de.svg
+   :target: https://pypi.org/project/unidown-mr-de/
