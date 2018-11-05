@@ -40,7 +40,7 @@ setup(
             'nose2[coverage_plugin]==0.8.0',
             'twine==1.12.1',
             'setuptools==40.5.0',
-            'wheel==0.32.1',
+            'wheel==0.32.2',
             'pygments==2.2.0'
         ]
     },
