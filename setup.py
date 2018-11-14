@@ -39,7 +39,7 @@ setup(
             'prospector[with_everything]==1.1.4',
             'nose2[coverage_plugin]==0.8.0',
             'twine==1.12.1',
-            'setuptools==40.6.1',
+            'setuptools==40.6.2',
             'wheel==0.32.2',
             'pygments==2.2.0'
         ]
