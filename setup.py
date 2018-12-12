@@ -41,7 +41,7 @@ setup(
             'twine==1.12.1',
             'setuptools==40.6.3',
             'wheel==0.32.3',
-            'pygments==2.2.0'
+            'pygments==2.3.0'
         ]
     },
     package_data={
