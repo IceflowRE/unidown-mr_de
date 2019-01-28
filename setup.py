@@ -32,7 +32,7 @@ setup(
     install_requires=[
         'unidown==2.0.0.dev6',
         'urllib3[secure]==1.24.1',
-        'tqdm==4.29.1',
+        'tqdm==4.30.0',
     ],
     extras_require={
         'dev': [
