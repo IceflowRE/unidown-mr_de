@@ -36,7 +36,7 @@ setup(
     ],
     extras_require={
         'dev': [
-            'prospector[with_everything]==1.1.6.3',
+            'prospector[with_everything]==1.1.6.4',
             'nose2[coverage_plugin]==0.9.1',
             'twine==1.13.0',
             'setuptools==41.0.1',
