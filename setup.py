@@ -31,7 +31,7 @@ setup(
     python_requires='>=3.7',
     install_requires=[
         'unidown==2.0.0.dev6',
-        'urllib3[secure]==1.25.3',
+        'urllib3[secure]==1.25.5',
         'tqdm==4.35.0',
     ],
     extras_require={
