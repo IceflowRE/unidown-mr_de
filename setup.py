@@ -9,7 +9,7 @@ with Path('README.rst').open(mode='r', encoding='UTF-8') as reader:
 
 setup(
     name='unidown-mr_de',
-    version='1.0.0.dev1',
+    version='1.0.0',
     description='MR german books plugin for unidown.',
     long_description=long_description,
     author='Iceflower S',
@@ -17,7 +17,7 @@ setup(
     license='GPLv3',
     url='https://github.com/IceflowRE/unidown-mr_de',
     classifiers=[
-        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Development Status :: 4 - Beta',
         'Operating System :: OS Independent',
@@ -30,18 +30,21 @@ setup(
     packages=find_packages(include=['unidown_mr_de', 'unidown_mr_de.*']),
     python_requires='>=3.7',
     install_requires=[
-        'unidown==2.0.0.dev6',
-        'urllib3[secure]==1.25.3',
-        'tqdm==4.35.0',
+        'unidown==2.0.0',
+        'urllib3[secure]==1.25.8',
+        'tqdm==4.44.0',
+        'beautifulsoup4==4.8.2',
+        'lxml==4.5.0',
+        'certifi'
     ],
     extras_require={
         'dev': [
-            'prospector[with_everything]==1.1.7',
-            'nose2[coverage_plugin]==0.9.1',
-            'twine==1.14.0',
-            'setuptools==41.2.0',
-            'wheel==0.33.6',
-            'pygments==2.4.2'
+            'flake8==3.7.9',
+            'pylint==2.4.4',
+            'pyroma==2.6',
+            'twine==3.1.1',
+            'setuptools==46.1.3',
+            'wheel==0.34.2',
         ]
     },
     package_data={

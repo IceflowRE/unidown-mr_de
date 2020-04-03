@@ -6,24 +6,13 @@ from pathlib import Path
 from unidown.plugin.exceptions import PluginException
 
 
-class GetEbookLinksException(PluginException):
+class GetEbookLinksError(PluginException):
     """
-    Something wents wrong while parsing an wiki thread.
+    Something wents wrong while parsing an thread.
     Has default values due to python bug: https://bugs.python.org/issue37208
     """
 
-    def __init__(self, path: Path = Path(''), orig_ex: Exception = None):
+    def __init__(self, file: Path, orig_ex: Exception = None):
         super().__init__()
-        self.path = path
+        self.file = file
         self.orig_ex = orig_ex
-
-
-class NothingFoundInThread(PluginException):
-    """
-    If no ebook in a wiki thread was found.
-    Has default values due to python bug: https://bugs.python.org/issue37208
-    """
-
-    def __init__(self, path: Path = Path('')):
-        super().__init__()
-        self.path = path

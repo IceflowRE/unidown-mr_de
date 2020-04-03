@@ -3,15 +3,15 @@ MR german books plugin for unidown
 **********************************
 |maintained| |programming language| |license|
 
-|travis| |appveyor| |requirements| |codacy|
+|travis| |requirements| |codacy|
 
 |pypi|
 
 ----
 
-This plugin makes it possible to download all available ebooks from the german MobileRead wiki (https://wiki.mobileread.com/wiki/Free_eBooks-de/de)
+Download all available german ebooks from the MobileRead `wiki <https://wiki.mobileread.com/wiki/Free_eBooks-de/de>`__ and the `publication thread <https://www.mobileread.com//forums/showthread.php?t=31130>`__
 
-Dieses Plugin ermöglicht es alle verfügbaren eBooks von der deutschen MobileRead Wikiliste (https://wiki.mobileread.com/wiki/Free_eBooks-de/de) herunterzuladen.
+Lädt alle verfügbaren deutschen eBooks von der MobileRead `Wikiliste <https://wiki.mobileread.com/wiki/Free_eBooks-de/de>`__ und dem `Veröffentlichungsthread <https://www.mobileread.com//forums/showthread.php?t=31130>`__ herunter.
 
 ----
 
@@ -23,7 +23,7 @@ This is a plugin for `unidown <https://github.com/IceflowRE/unidown>`__, in shor
 Installation
 ------------
 
-Install `Python <https://www.python.org/downloads/>`__ 3 or greater.
+Install `Python <https://www.python.org/downloads/>`__ 3.8 or greater.
 
 Open a terminal and install with:
 
@@ -31,7 +31,7 @@ Open a terminal and install with:
 
     pip install unidown-mr-de
 
-This installs the main program `unidown <https://github.com/IceflowRE/unidown>`__ and the plugin.
+This installs the main program `unidown <https://github.com/IceflowRE/unidown>`__ and this ``mr_de`` plugin.
 
 Usage
 -----
@@ -49,34 +49,44 @@ There are some options you can choose from:
 
 delay
     Delay (seconds) between the downloads (default: 2s).
-format
-    Download only the specified format (default: all formats).
+include
+    Include formats into download, to include unrecognized file types use ``unrecognized`` as part of the options list.
+    If no options are given include refers to include all.
+exclude
+    Include formats into download, to include unrecognized file types use ``unrecognized`` as part of the options list.
+    If no options are given exclude refers to exclude nothing.
+
+If both include and exclude are given, it first includes all given formats and then excludes all given excludes.
 
 Example:
 
 .. code-block:: shell
 
-    unidown -p mr_de delay=4 format=epub,mobi,lrf,imp,pdf,lit,azw,azw3,rar,lrx
+    unidown -p mr_de -o delay=4 -o include=epub,mobi,lrf,imp,pdf,lit,azw,azw3,rar,lrx
+
+.. code-block:: shell
+
+    unidown -p mr_de delay=4 exclude=png,jpg,jpeg,unrecognized
 
 Downloaded files
 ----------------
 
-By default the program creates a downloads folder in the executing directory. So the ebooks are in `./downloads/mr_de`.
+By default the program creates a downloads folder in the executing directory. So the ebooks are in ``./downloads/mr_de``.
 
 Notes
 -----
 
-You should have in mind that the MR server was not intended for this automatically/ machine usage.
+You should respect that MobileRead.com is a privately owned, operated and funded community and should not set that delay value to a low value.
 
 Information - *Deutsch*
 =======================
 
-Dies ist ein Plugin für das Programm `unidown <https://github.com/IceflowRE/unidown>`__, kurz unidown verwaltet die bereits heruntergeladenen eBooks und verhindert doppelte Downloads.
+Dies ist ein Plugin für das Programm `unidown <https://github.com/IceflowRE/unidown>`__, unidown übernimmt die Verwaltung damit bereits heruntergeladene eBooks nicht nochmal heruntergeladen werden.
 
 Installieren
 ------------
 
-Installiere `Python <https://www.python.org/downloads/>`__ 3 oder höher.
+Installiere `Python <https://www.python.org/downloads/>`__ 3.8 oder höher.
 
 Öffne ein Terminal und installiere es mit:
 
@@ -102,14 +112,22 @@ Es können verschiedene Optionen hinzugefügt werden.
 
 delay
     Verzögerung (Sekunden) zwischen den Downloads (Standard: 2s).
-format
-    Lädt nur die spezifizierten Formate herunter (Standard: jedes Format).
+include
+    Liste von Formaten zum Downloaden, um Dateitypen zu downloaden die nicht erkannt werden können, muss ``unrecognized`` zur Liste hinzugefügt werden.
+    Falls keine Option angegeben wurde, werden alle Typen inkludiert.
+exclude
+    Liste von Formaten die Ausgeschlossen werden, um Dateitypen auszuschließen die nicht erkannt werden können, muss ``unrecognized`` zur Liste hinzugefügt werden.
+    Falls keine Option angegeben wurde, wird kein Typ ausgeschlossen.
 
-Beispiel:
+Falls beide Optionen angegeben werden, wird erst der include Filter und dann der exclude Filter angewandt.
 
 .. code-block:: shell
 
-    unidown -p mr_de delay=4 format=epub,mobi,lrf,imp,pdf,lit,azw,azw3,rar,lrx
+    unidown -p mr_de -o delay=4 -o include=epub,mobi,lrf,imp,pdf,lit,azw,azw3,rar,lrx
+
+.. code-block:: shell
+
+    unidown -p mr_de delay=4 exclude=png,jpg,jpeg,unrecognized
 
 Heruntergeladene Dateien
 ------------------------
@@ -119,7 +137,7 @@ Standardmäßig erstellt das Programm in dem Ordner, von dem es ausgeführt wurd
 Hinweis
 -------
 
-Du solltest beachten, dass die MR Server nicht für diese automatische/maschinelle Benutzung gedacht sind.
+Es sollte beachtet werden, dass MobileRead.com privat gegründet und betrieben wird, daher sollte der delay Wert nicht zu gering gesetzt werden.
 
 ----
 
@@ -138,38 +156,14 @@ Credits
 Third Party
 -----------
 
-nose2
-    - Jason Pellerin
-    - https://github.com/nose-devs/nose2
-    - `BSD-2-Clause <https://github.com/nose-devs/nose2/blob/master/license.txt>`__
-Packaging
-    - Donald Stufft and individual contributors
-    - https://github.com/pypa/packaging
-    - `BSD-3-Clause, Apache-2.0 <https://github.com/pypa/packaging/blob/master/LICENSE>`__
-Prospector
-    - `landscapeio <https://github.com/landscapeio>`_
-    - https://github.com/landscapeio/prospector
-    - `GPL-2.0+ <https://github.com/landscapeio/prospector/blob/master/LICENSE>`__
-Setuptools
-    - Jason R Coombs / `Setuptools Developers <https://github.com/orgs/pypa/teams/setuptools-developers>`_
-    - https://github.com/pypa/setuptools
-    - `MIT <https://github.com/pypa/setuptools/blob/master/LICENSE>`__
-tqdm
-    - `noamraph <https://github.com/noamraph>`_
-    - https://github.com/tqdm/tqdm
-    - `MIT, MPL-2.0 <https://raw.githubusercontent.com/tqdm/tqdm/master/LICENCE>`__
-twine
-    - `various authors <https://github.com/pypa/twine/blob/master/AUTHORS>`_
-    - https://github.com/pypa/twine
-    - `Apache-2.0 <https://github.com/pypa/twine/blob/master/LICENSE>`__
+unidown
+    - `Iceflower S <https://github.com/IceflowRE>`__
+    - https://github.com/IceflowRE/unidown/
+    - `GPLv3 <https://github.com/IceflowRE/unidown/blob/master/LICENSE.md>`__
 urllib3
     - `Andrey Petrov and contributors <https://github.com/shazow/urllib3/blob/master/CONTRIBUTORS.txt>`_
     - https://github.com/shazow/urllib3
     - `MIT <https://github.com/shazow/urllib3/blob/master/LICENSE.txt>`__
-wheel
-    - `Charlie Denton <https://github.com/meshy>`_
-    - https://github.com/meshy/pythonwheels
-    - `BSD-2-Clause <https://github.com/meshy/pythonwheels/blob/master/LICENSE>`__
 
 License
 -------
