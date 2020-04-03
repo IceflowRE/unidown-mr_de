@@ -30,7 +30,7 @@ setup(
     packages=find_packages(include=['unidown_mr_de', 'unidown_mr_de.*']),
     python_requires='>=3.7',
     install_requires=[
-        'unidown==2.0.0',
+        'unidown==2.0.1',
         'urllib3[secure]==1.25.8',
         'tqdm==4.45.0',
         'beautifulsoup4==4.8.2',
