@@ -32,7 +32,7 @@ setup(
     install_requires=[
         'unidown==2.0.0',
         'urllib3[secure]==1.25.8',
-        'tqdm==4.44.0',
+        'tqdm==4.45.0',
         'beautifulsoup4==4.8.2',
         'lxml==4.5.0',
         'certifi'
