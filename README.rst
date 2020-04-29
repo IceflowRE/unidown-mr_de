@@ -66,7 +66,7 @@ Example:
 
 .. code-block:: shell
 
-    unidown -p mr_de delay=4 exclude=png,jpg,jpeg,unrecognized
+    unidown -p mr_de -o delay=4 -o exclude=png,jpg,jpeg,unrecognized
 
 Downloaded files
 ----------------
@@ -127,7 +127,7 @@ Falls beide Optionen angegeben werden, wird erst der include Filter und dann der
 
 .. code-block:: shell
 
-    unidown -p mr_de delay=4 exclude=png,jpg,jpeg,unrecognized
+    unidown -p mr_de -o delay=4 -o exclude=png,jpg,jpeg,unrecognized
 
 Heruntergeladene Dateien
 ------------------------
