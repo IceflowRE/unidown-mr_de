@@ -28,23 +28,23 @@ setup(
     ],
     keywords='plugin unidown',
     packages=find_packages(include=['unidown_mr_de', 'unidown_mr_de.*']),
-    python_requires='>=3.7',
+    python_requires='>=3.8',
     install_requires=[
-        'unidown==2.0.1',
-        'urllib3[secure]==1.25.8',
-        'tqdm==4.45.0',
-        'beautifulsoup4==4.8.2',
-        'lxml==4.5.0',
+        'unidown==2.0.2',
+        'urllib3[secure]==1.25.10',
+        'tqdm==4.48.2',
+        'beautifulsoup4==4.9.1',
+        'lxml==4.5.2',
         'certifi'
     ],
     extras_require={
         'dev': [
-            'flake8==3.7.9',
-            'pylint==2.4.4',
+            'flake8==3.8.3',
+            'pylint==2.6.0',
             'pyroma==2.6',
-            'twine==3.1.1',
-            'setuptools==46.1.3',
-            'wheel==0.34.2',
+            'twine==3.2.0',
+            'setuptools==50.3.0',
+            'wheel==0.35.1',
         ]
     },
     package_data={
