@@ -26,7 +26,7 @@ class Plugin(APlugin):
     """
     Plugin class, derived from APlugin.
     """
-    _info = PluginInfo('mr_de', '1.0.0', 'www.mobileread.com')
+    _info = PluginInfo('mr_de', '1.0.2', 'www.mobileread.com')
 
     def __init__(self, settings: Settings, options: Dict[str, Any] = None):
         super().__init__(settings, options)
