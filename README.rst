@@ -3,7 +3,7 @@ MR german books plugin for unidown
 **********************************
 |maintained| |programming language| |license|
 
-|travis| |requirements| |codacy|
+|github actions| |requirements| |codacy|
 
 |pypi|
 
@@ -188,9 +188,9 @@ You should have received a copy of the GNU General Public License along with thi
 .. |license| image:: https://img.shields.io/badge/License-GPL%20v3-blue.svg
    :target: https://www.gnu.org/licenses/gpl-3.0
 
-.. |travis| image:: https://img.shields.io/travis/com/IceflowRE/unidown-mr_de/master.svg?label=Travis%20CI
-   :target: https://travis-ci.com/IceflowRE/unidown-mr_de
-   
+.. |github actions| image:: https://github.com/IceflowRE/unidown-mr_de/workflows/Build/badge.svg
+   :target: https://github.com/IceflowRE/unidown-mr_de/actions
+
 .. |appveyor| image:: https://img.shields.io/appveyor/ci/IceflowRE/unidown-mr-de/master.svg?label=AppVeyor%20CI
     :target: https://ci.appveyor.com/project/IceflowRE/unidown-mr-de/branch/master
 
