@@ -31,20 +31,20 @@ setup(
     python_requires='>=3.8',
     install_requires=[
         'unidown==2.0.2',
-        'urllib3[secure]==1.25.10',
-        'tqdm==4.48.2',
-        'beautifulsoup4==4.9.1',
-        'lxml==4.5.2',
-        'certifi'
+        'urllib3[secure]>=1.26.7',
+        'tqdm>=4.62.3',
+        'beautifulsoup4==4.10.0',
+        'lxml==4.7.1',
+        'certifi',
     ],
     extras_require={
         'dev': [
-            'flake8==3.8.3',
-            'pylint==2.6.0',
-            'pyroma==2.6',
-            'twine==3.2.0',
-            'setuptools==50.3.0',
-            'wheel==0.35.1',
+            'flake8==4.0.1',
+            'pylint==2.12.2',
+            'pyroma==3.2',
+            'twine==3.7.1',
+            'setuptools==59.6.0',
+            'wheel==0.37.0',
         ]
     },
     package_data={
