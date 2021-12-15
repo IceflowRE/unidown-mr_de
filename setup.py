@@ -33,11 +33,11 @@ setup(
     packages=find_packages(include=['unidown_mr_de', 'unidown_mr_de.*']),
     python_requires='>=3.8',
     install_requires=[
-        'unidown==2.0.2',
+        'unidown==2.0.3',
         'urllib3[secure]>=1.26.7',
         'tqdm>=4.62.3',
-        'beautifulsoup4==4.10.0',
-        'lxml==4.7.1',
+        'beautifulsoup4>=4.10.0',
+        'lxml>=4.7.1',
         'certifi',
     ],
     extras_require={
