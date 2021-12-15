@@ -3,19 +3,22 @@ from pathlib import Path
 
 from setuptools import find_packages, setup
 
+from unidown_mr_de import meta
+
 # get long description
 with Path('README.rst').open(mode='r', encoding='UTF-8') as reader:
-    long_description = reader.read()
+    LONG_DESCRIPTION = reader.read()
 
 setup(
-    name='unidown-mr_de',
-    version='1.0.2',
-    description='MR german books plugin for unidown.',
-    long_description=long_description,
-    author='Iceflower S',
-    author_email='iceflower@gmx.de',
-    license='GPLv3',
-    url='https://github.com/IceflowRE/unidown-mr_de',
+    name=meta.NAME,
+    version=meta.VERSION,
+    description=meta.DESCRIPTION,
+    long_description=LONG_DESCRIPTION,
+    long_description_content_type='text/x-rst',
+    author=meta.AUTHOR,
+    author_email=meta.AUTHOR_EMAIL,
+    license=meta.LICENSE,
+    url=meta.PROJECT_URL,
     classifiers=[
         'Programming Language :: Python :: 3.8',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',

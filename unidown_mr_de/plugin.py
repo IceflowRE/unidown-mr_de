@@ -17,6 +17,7 @@ from unidown.core.settings import Settings
 from unidown.plugin import APlugin, PluginInfo, LinkItemDict, LinkItem, PluginException
 from urllib3.exceptions import HTTPError
 
+from unidown_mr_de import meta
 from unidown_mr_de.exceptions import GetEbookLinksError
 from unidown_mr_de.link_item import MrLinkItem
 from unidown_mr_de.tools import sizeof_fmt
@@ -26,7 +27,7 @@ class Plugin(APlugin):
     """
     Plugin class, derived from APlugin.
     """
-    _info = PluginInfo('mr_de', '1.0.2', 'www.mobileread.com')
+    _info = PluginInfo('mr_de', meta.VERSION, 'www.mobileread.com')
 
     def __init__(self, settings: Settings, options: Dict[str, Any] = None):
         super().__init__(settings, options)
