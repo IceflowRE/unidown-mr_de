@@ -9,7 +9,7 @@ NAME = "unidown-mr_de"
 #: Long name of this program
 LONG_NAME = "unidown-mr_de"
 #: Version in PEP440 format
-VERSION = '1.0.2'
+VERSION = '1.0.3'
 #: Author
 AUTHOR = 'Iceflower S'
 #: Author github link
