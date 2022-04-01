@@ -3,7 +3,7 @@ MR german books plugin for unidown
 **********************************
 |maintained| |programming language| |license|
 
-|github actions| |requirements| |codacy|
+|github actions| |requirements|
 
 |pypi|
 
@@ -191,14 +191,8 @@ You should have received a copy of the GNU General Public License along with thi
 .. |github actions| image:: https://github.com/IceflowRE/unidown-mr_de/workflows/Build/badge.svg
    :target: https://github.com/IceflowRE/unidown-mr_de/actions
 
-.. |appveyor| image:: https://img.shields.io/appveyor/ci/IceflowRE/unidown-mr-de/main.svg?label=AppVeyor%20CI
-    :target: https://ci.appveyor.com/project/IceflowRE/unidown-mr-de/branch/main
-
 .. |requirements| image:: https://requires.io/github/IceflowRE/unidown-mr_de/requirements.svg?branch=main
    :target: https://requires.io/github/IceflowRE/unidown-mr_de/requirements/?branch=main
-
-.. |codacy| image:: https://api.codacy.com/project/badge/Grade/8b542926cd9e445c97545f2245aac712
-   :target: https://www.codacy.com/app/IceflowRE/unidown-mr_de
 
 .. |pypi| image:: https://img.shields.io/pypi/v/unidown-mr-de.svg
    :target: https://pypi.org/project/unidown-mr-de/
