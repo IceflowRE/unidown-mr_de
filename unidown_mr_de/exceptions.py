@@ -3,10 +3,10 @@ mr_de specific module exceptions.
 """
 from pathlib import Path
 
-from unidown.plugin.exceptions import PluginException
+from unidown.plugin.exceptions import PluginError
 
 
-class GetEbookLinksError(PluginException):
+class GetEbookLinksError(PluginError):
     """
     Something wents wrong while parsing an thread.
     Has default values due to python bug: https://bugs.python.org/issue37208

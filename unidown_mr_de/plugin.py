@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 from unidown import tools
 from unidown.core.settings import Settings
-from unidown.plugin import APlugin, PluginInfo, LinkItemDict, LinkItem, PluginException
+from unidown.plugin import APlugin, PluginInfo, LinkItemDict, LinkItem, PluginError
 from urllib3.exceptions import HTTPError
 
 from unidown_mr_de import meta
@@ -63,9 +63,9 @@ class Plugin(APlugin):
         self._download_listings(pages_dict)
         listing_success, listing_failed = self.check_download(pages_dict, self.listing_dir)
         if len(listing_failed) != 0:
-            raise PluginException("No all listing threads were downloaded.")
+            raise PluginError("No all listing threads were downloaded.")
         if not self.wiki_list_file.exists():
-            raise PluginException("Failed to download the wiki list.")
+            raise PluginError("Failed to download the wiki list.")
 
         # extract links from the listing threads to get the links to the other
         thread_list, attach_list = self._extract_listing(listing_success)
