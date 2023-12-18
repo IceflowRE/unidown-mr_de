@@ -11,9 +11,9 @@ class MrLinkItem(LinkItem):
     """
     Own link item with additional size and type information.
     """
-    def __init__(self, name: str, time: datetime, type: str, size: int):
+    def __init__(self, name: str, time: datetime, type_: str, size: int):
         super().__init__(name, time)
-        self.type: str = type
+        self.type: str = type_
         self.size: int = size
 
     def __repr__(self) -> str:

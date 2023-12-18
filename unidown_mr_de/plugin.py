@@ -27,7 +27,7 @@ class Plugin(APlugin):
     """
     Plugin class, derived from APlugin.
     """
-    _info = PluginInfo('mr_de', meta.VERSION, 'www.mobileread.com')
+    _INFO = PluginInfo('mr_de', meta.VERSION, 'www.mobileread.com')
 
     def __init__(self, settings: Settings, options: Dict[str, Any] = None):
         super().__init__(settings, options)
@@ -83,7 +83,7 @@ class Plugin(APlugin):
         if len(content_success) == 0:
             raise PluginException("No content thread was downloaded successful.")
 
-        # extract attachmend links
+        # extract attachment links
         attach_list = self._extract_content(attach_list, content_success)
         # generate attachment links, with file size and type
         attach_dict = self._create_attach_link_item_dict(attach_list)
