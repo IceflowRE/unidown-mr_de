@@ -81,7 +81,7 @@ class Plugin(APlugin):
         self.download(thread_dict, self.threads_dir, 'Downloading content threads', 'thread')
         content_success, _ = self.check_download(thread_dict, self.threads_dir)
         if len(content_success) == 0:
-            raise PluginException("No content thread was downloaded successful.")
+            raise PluginError("No content thread was downloaded successful.")
 
         # extract attachment links
         attach_list = self._extract_content(attach_list, content_success)
